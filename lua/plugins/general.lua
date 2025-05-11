@@ -1,4 +1,3 @@
--- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
@@ -8,11 +7,6 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
-  -- { import = "lazyvim.plugins" },
-  -- { import = "lazyvim.plugins.extras" },
-  -- { import = "lazyvim.plugins.extras.lang.json" },
-
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
