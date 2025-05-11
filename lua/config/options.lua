@@ -122,3 +122,12 @@ end
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+-- set to `true` to follow the main branch
+-- you need to have a working rust toolchain to build the plugin
+-- in this case.
+vim.g.lazyvim_blink_main = false
+
+-- Set to `false` to prevent "non-lsp snippets"" from appearing inside completion windows
+-- Motivation: Less clutter in completion windows and a more direct usage of snippits
+vim.g.lazyvim_mini_snippets_in_completion = true
