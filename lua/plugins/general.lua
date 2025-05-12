@@ -27,10 +27,6 @@ return {
     },
   },
   {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
-  },
-  {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       opts.options.theme = "gruvbox" -- Change theme

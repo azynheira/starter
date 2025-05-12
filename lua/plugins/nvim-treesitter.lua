@@ -4,6 +4,13 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "c",
+        "cpp",
+        "git_config",
+        "gitcommit",
+        "git_rebase",
+        "gitignore",
+        "gitattributes",
         "bash",
         "html",
         "json",
