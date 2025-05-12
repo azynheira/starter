@@ -131,3 +131,6 @@ vim.g.lazyvim_blink_main = false
 -- Set to `false` to prevent "non-lsp snippets"" from appearing inside completion windows
 -- Motivation: Less clutter in completion windows and a more direct usage of snippits
 vim.g.lazyvim_mini_snippets_in_completion = true
+
+-- Disable lua rocks
+--vim.g.opts.rocks.enabled = false
