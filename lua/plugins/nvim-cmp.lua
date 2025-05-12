@@ -3,7 +3,12 @@ return {
     "hrsh7th/nvim-cmp",
     optional = true,
     dependencies = {
-      { "petertriho/cmp-git", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "hrsh7th/cmp-emoji" },
+      "petertriho/cmp-git",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-emoji",
+      "hrsh7th/cmp-cmdline",
     },
     opts = function(_, opts)
       table.insert(opts.sources, { name = "git" })
@@ -71,27 +76,5 @@ return {
       }
     end,
     main = "lazyvim.util.cmp",
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      {
-        "garymjr/nvim-snippets",
-        opts = {
-          friendly_snippets = true,
-        },
-        dependencies = { "rafamadriz/friendly-snippets" },
-      },
-    },
-    opts = function(_, opts)
-      opts.snippet = {
-        expand = function(item)
-          return LazyVim.cmp.expand(item.body)
-        end,
-      }
-      if LazyVim.has("nvim-snippets") then
-        table.insert(opts.sources, { name = "snippets" })
-      end
-    end,
   },
 }

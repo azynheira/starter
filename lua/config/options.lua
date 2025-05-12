@@ -12,13 +12,13 @@ vim.g.snacks_animate = false
 -- Can be one of: telescope, fzf
 -- Leave it to "auto" to automatically use the picker
 -- enabled with `:LazyExtras`
-vim.g.lazyvim_picker = "auto"
+vim.g.lazyvim_picker = "snacks"
 
 -- LazyVim completion engine to use.
 -- Can be one of: nvim-cmp, blink.cmp
 -- Leave it to "auto" to automatically use the completion engine
 -- enabled with `:LazyExtras`
-vim.g.lazyvim_cmp = "auto"
+vim.g.lazyvim_cmp = "nvim-cmp"
 
 -- if the completion engine supports the AI source,
 -- use that instead of inline suggestions
@@ -109,6 +109,7 @@ opt.virtualedit = "block" -- Allow cursor to move where there is no text in visu
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
+opt.paste = false
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
@@ -133,4 +134,10 @@ vim.g.lazyvim_blink_main = false
 vim.g.lazyvim_mini_snippets_in_completion = true
 
 -- Disable lua rocks
---vim.g.opts.rocks.enabled = false
+-- vim.g.opts.rocks.hererocks.enabled = false
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3
+
+-- Default splitting will cause your main splits to jump when opening an edgebar.
+-- To prevent this, set `splitkeep` to either `screen` or `topline`.
+vim.opt.splitkeep = "screen"
