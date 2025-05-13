@@ -28,7 +28,7 @@ return {
     opts = function(_, opts)
       opts.options.theme = "gruvbox" -- Change theme
       opts.sections.lualine_c = { "filename", "lsp_progress" } -- Add LSP progress
-      opts.sections.lualine_b = { "navic", color_correction = "dynamic" }
+     -- opts.sections.lualine_b = { "navic", color_correction = "dynamic" }
     end,
   },
   {
