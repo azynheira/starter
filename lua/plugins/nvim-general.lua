@@ -1,6 +1,5 @@
 -- stylua: ignore
 return {
-  { "ellisonleao/gruvbox.nvim" },
   { "snacks.nvim",
     opts = { words = { enabled = false } }
   },
@@ -26,7 +25,6 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
-      opts.options.theme = "gruvbox" -- Change theme
       opts.sections.lualine_c = { "filename", "lsp_progress" } -- Add LSP progress
      -- opts.sections.lualine_b = { "navic", color_correction = "dynamic" }
     end,
