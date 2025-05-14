@@ -4,12 +4,27 @@ return {
   { "shaunsingh/nord.nvim" },
   { "folke/tokyonight.nvim" },
   {
+    "craftzdog/solarized-osaka.nvim",
+    branch = "osaka",
+    lazy = true,
+    priority = 1000,
+    opts = function()
+      return {
+        transparent = false,
+      }
+    end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "solarized-osaka",
     },
   },
   { "folke/snacks.nvim", opts = { dashboard = { enabled = false } } },
+  {
+    "xzbdmw/colorful-menu.nvim",
+    config = function() end,
+  },
   -- Dashboard. This runs when neovim starts, and is what displays
   {
     "goolord/alpha-nvim",
