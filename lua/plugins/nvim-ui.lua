@@ -14,10 +14,11 @@ return {
       }
     end,
   },
+  -- Setup colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      colorscheme = "gruvbox",
     },
   },
   { "folke/snacks.nvim", opts = { dashboard = { enabled = false } } },
@@ -113,7 +114,6 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       opts.sections.lualine_c = { "filename", "lsp_progress" } -- Add LSP progress
-      -- opts.sections.lualine_b = { "navic", color_correction = "dynamic" }
     end,
   },
   {
