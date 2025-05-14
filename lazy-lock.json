@@ -1,6 +1,7 @@
 {
+  "AniKakoune": { "branch": "main", "commit": "a1adf214e276fa8c3f439ce3fa13a6f647744dab" },
   "LazyVim": { "branch": "main", "commit": "25abbf546d564dc484cf903804661ba12de45507" },
-  "SchemaStore.nvim": { "branch": "main", "commit": "df87d16fc4ea7c2c67cfc00b513861738693fe07" },
+  "SchemaStore.nvim": { "branch": "main", "commit": "b20f287e59a5376ca0de23140c6d94563d64695d" },
   "aerial.nvim": { "branch": "master", "commit": "2e00d1d4248f08dddfceacb8d2996e51e13e00f6" },
   "alpha-nvim": { "branch": "main", "commit": "de72250e054e5e691b9736ee30db72c65d560771" },
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
