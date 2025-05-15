@@ -112,9 +112,21 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    opts = function(_, opts)
-      opts.sections.lualine_c = { "filename", "lsp_progress" } -- Add LSP progress
-    end,
+    opts = {
+      options = {
+        theme = "gruvbox", -- Change to your preferred theme
+        section_separators = { left = "", right = "" },
+        component_separators = { left = "", right = "" },
+      },
+      sections = {
+        lualine_a = { "mode" },
+        lualine_b = { "branch", "diff", "diagnostics" },
+        lualine_c = { "filename" },
+        lualine_x = { "encoding", "fileformat", "filetype" },
+        lualine_y = { "progress" },
+        lualine_z = { "location" },
+      },
+    },
   },
   {
     "RRethy/vim-illuminate",
