@@ -27,6 +27,7 @@ return {
         "jsonc",
         "lua",
         "luadoc",
+        "make",
         "markdown",
         "markdown_inline",
         "python",
@@ -51,7 +52,9 @@ return {
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
+        use_language_tree = true,
       },
+      indent = { enable = true },
       -- https://github.com/nvim-treesitter/playground#query-linter
       query_linter = {
         enable = true,
