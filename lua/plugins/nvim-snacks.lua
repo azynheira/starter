@@ -7,6 +7,8 @@ return {
     opts = {
       words = { enabled = false },
       image = { enabled = true },
+bigfile = { enabled = true },
+		bufdelete = { enabled = true },
       -- show hidden files in snacks.explorer
       explorer = {
         hidden = true,
@@ -59,7 +61,12 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
       statuscolumn = {
         enabled = true,
       },
-      terminal = {},
+      terminal = {
+        enabled = true,
+			 win = {
+			 	position = "float",
+			 },
+      },
 
       -- convenience
       quickfile = {},

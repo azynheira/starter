@@ -35,13 +35,13 @@ return {
         use_nvim_cmp_as_default = false,
         -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
         -- adjusts spacing to ensure icons are aligned
-        nerd_font_variant = "normal",
+        nerd_font_variant = "mono",
       },
       completion = {
         accept = {
           -- experimental auto-brackets support
           auto_brackets = {
-            enabled = false,
+            enabled = true,
           },
         },
         menu = {
@@ -51,7 +51,7 @@ return {
         },
         documentation = {
           auto_show = true,
-          auto_show_delay_ms = 200,
+          auto_show_delay_ms = 300,
         },
         ghost_text = {
           enabled = vim.g.ai_cmp,
@@ -68,10 +68,15 @@ return {
         default = { "lsp", "path", "snippets", "buffer" },
       },
 
+      -- Command line configuration
       cmdline = {
-        enabled = false,
+        enabled = true,
+        completion = {
+          menu = {
+            auto_show = false,
+          },
+        },
       },
-
       keymap = {
         preset = "enter",
         ["<C-y>"] = { "select_and_accept" },

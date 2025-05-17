@@ -30,15 +30,25 @@ return {
       },
     },
   },
-  {
-    "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    opts = {},
-  },
   { "tpope/vim-repeat", event = "VeryLazy" },
   {
     "echasnovski/mini.move",
     event = "VeryLazy",
     opts = {},
+  },
+  {
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    opts = {},
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = { "InsertEnter" },
+    opts = {
+      check_ts = true,
+      ts_config = {
+        lua = { "string" }, -- don't add pairs in lua string treesitter nodes
+      },
+    },
   },
 }
