@@ -44,6 +44,17 @@ return {
             enabled = true,
           },
         },
+        trigger = {
+          show_on_keyword = true,
+          show_on_trigger_character = true,
+        },
+        list = {
+          max_items = 20,
+          selection = {
+            preselect = true,
+            auto_insert = false,
+          },
+        },
         menu = {
           draw = {
             treesitter = { "lsp" },
@@ -52,22 +63,26 @@ return {
         documentation = {
           auto_show = true,
           auto_show_delay_ms = 300,
+          window = { border = "rounded" },
         },
         ghost_text = {
           enabled = vim.g.ai_cmp,
         },
       },
-
+      fuzzy = {
+        implementation = "prefer_rust_with_warning",
+      },
       -- experimental signature help support
       -- signature = { enabled = true },
-
+      signature = {
+        enabled = true,
+      },
       sources = {
         -- adding any nvim-cmp sources here will enable them
         -- with blink.compat
         compat = {},
         default = { "lsp", "path", "snippets", "buffer" },
       },
-
       -- Command line configuration
       cmdline = {
         enabled = true,

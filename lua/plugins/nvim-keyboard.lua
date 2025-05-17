@@ -1,10 +1,13 @@
 return {
   {
     "folke/which-key.nvim",
+    enabled = true,
     opts = {
-      spec = {
-        { "<leader>k", group = "overseer" },
-      },
+      preset = "helix",
+      spec = {},
+    },
+    icons = {
+      mappings = vim.g.have_nerd_font,
     },
   },
 }

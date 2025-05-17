@@ -1,4 +1,3 @@
--- stylua: ignore
 return {
   {
     "folke/snacks.nvim",
@@ -7,24 +6,24 @@ return {
     opts = {
       words = { enabled = false },
       image = { enabled = true },
-bigfile = { enabled = true },
-		bufdelete = { enabled = true },
+      bigfile = { enabled = true },
+      bufdelete = { enabled = true },
       -- show hidden files in snacks.explorer
       explorer = {
         hidden = true,
         ignored = true,
-        include = {".*"},
-        exclude = { "node_modules", ".git" , ".hg"},
+        include = { ".*" },
+        exclude = { "node_modules", ".git", ".hg" },
       },
       picker = {
         hidden = true,
         ignored = true,
-        exclude = { "node_modules", ".git", ".hg"},
+        exclude = { "node_modules", ".git", ".hg" },
       },
       sources = {
         explorer = {
-          exclude = { '.git', ".hg" },
-          include = { '.*' },
+          exclude = { ".git", ".hg" },
+          include = { ".*" },
         },
       },
       -- Dashboard. This runs when neovim starts, and is what displays
@@ -56,22 +55,28 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
       notifier = {
         enabled = true,
         --- available style: "compact"|"fancy"|"minimal"
-        style = "compact",
+        style = "fancy",
       },
       statuscolumn = {
         enabled = true,
       },
+      scratch = {
+        enabled = true,
+      },
       terminal = {
         enabled = true,
-			 win = {
-			 	position = "float",
-			 },
+        win = {
+          position = "bottom",
+        },
       },
-
       -- convenience
-      quickfile = {},
-
-      -- special mode
+      quickfile = {
+        enabled = true,
+      },
+      {
+        enabled = true,
+      },
+      --- special mode
       zen = {
         enabled = true,
         enter = true,

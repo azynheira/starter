@@ -10,6 +10,8 @@ return {
         "c",
         "cmake",
         "cpp",
+        "diff",
+        "dockerfile",
         "fish",
         "git_config",
         "git_rebase",
@@ -33,15 +35,23 @@ return {
         "rust",
         "sql",
         "tmux",
+        "toml",
         "vim",
         "vimdoc",
         "xml",
         "yaml",
       },
- -- matchup = {
+      -- matchup = {
       -- 	enable = true,
       -- },
 
+      auto_install = true,
+
+      -- Enable highlighting
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
       -- https://github.com/nvim-treesitter/playground#query-linter
       query_linter = {
         enable = true,
@@ -79,5 +89,5 @@ return {
       })
       vim.treesitter.language.register("markdown", "mdx")
     end,
-    },
+  },
 }
