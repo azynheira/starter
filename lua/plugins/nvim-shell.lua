@@ -1,14 +1,7 @@
 return {
   {
-    "swaits/zellij-nav.nvim",
-    lazy = true,
-    event = "VeryLazy",
-    keys = {
-      { "<c-h>", "<cmd>ZellijNavigateLeftTab<cr>", { silent = true, desc = "navigate left or tab" } },
-      { "<c-j>", "<cmd>ZellijNavigateDown<cr>", { silent = true, desc = "navigate down" } },
-      { "<c-k>", "<cmd>ZellijNavigateUp<cr>", { silent = true, desc = "navigate up" } },
-      { "<c-l>", "<cmd>ZellijNavigateRightTab<cr>", { silent = true, desc = "navigate right or tab" } },
-    },
-    opts = {},
+    "GR3YH4TT3R93/zellij-nav.nvim",
+    cond = os.getenv("ZELLIJ") == "0", -- Only load plugin if in active Zellij instance
+    event = "VeryLazy", -- Lazy load plugin for improved startup times
   },
 }
