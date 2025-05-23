@@ -1,5 +1,6 @@
 return {
   -- Colorschemes
+  { "oneslash/helix-nvim", version = "*" },
   { "vague2k/vague.nvim" },
   { "ellisonleao/gruvbox.nvim" },
   { "shaunsingh/nord.nvim" },
@@ -19,16 +20,14 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vague",
+      colorscheme = "helix",
     },
   },
-  {
-    "xzbdmw/colorful-menu.nvim",
-    config = function() end,
-  },
+  { "xzbdmw/colorful-menu.nvim" },
   {
     "echasnovski/mini.icons",
     opts = {
+      style = "glyph",
       file = {
         [".chezmoiignore"] = { glyph = "", hl = "MiniIconsGrey" },
         [".chezmoiremove"] = { glyph = "", hl = "MiniIconsGrey" },
