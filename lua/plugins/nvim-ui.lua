@@ -1,5 +1,6 @@
 return {
   -- Colorschemes
+  { "vague2k/vague.nvim" },
   { "ellisonleao/gruvbox.nvim" },
   { "shaunsingh/nord.nvim" },
   { "folke/tokyonight.nvim" },
@@ -18,7 +19,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "vague",
     },
   },
   {
