@@ -1,5 +1,5 @@
 -- options.lua NeoVIM options
--- Last Changed:2025-05-26 20:00:32
+-- Last Changed:2025-05-26 21:03:39
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 
@@ -47,7 +47,7 @@ vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 vim.g.root_lsp_ignore = { "copilot" }
 
 -- Hide deprecation warnings
-vim.g.deprecation_warnings = false
+vim.g.deprecation_warnings = true
 
 -- Show the current document symbols location from Trouble in lualine
 -- You can disable this for a buffer by setting `vim.b.trouble_lualine = false`

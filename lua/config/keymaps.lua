@@ -1,6 +1,7 @@
+--- keymaps.lua Keymaps
+-- Last Changed:2025-05-26 21:01:27
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
@@ -67,3 +68,5 @@ keymap.set("x", "<C-Up>", ":move '<-2<CR>gv-gv", opts)
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+
+vim.keymap.set("n", "U", "<C-R>", { desc = "Redo last change" })
