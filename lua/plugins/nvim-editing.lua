@@ -1,5 +1,5 @@
 -- nvim-editing.lua Editing related
--- Last Changed:2025-05-26 19:56:56
+-- Last Changed:2025-05-26 21:40:54
 return {
   {
     "echasnovski/mini.surround",
@@ -58,6 +58,12 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
+        -- Whether to ignore blank lines when commenting
+        ignore_blank_line = true,
+        -- Whether to ignore blank lines in actions and textobject
+        start_of_line = true,
+        -- Whether to force single space inner padding for comment parts
+        pad_comment_parts = true,
         custom_commentstring = function()
           return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo.commentstring
         end,

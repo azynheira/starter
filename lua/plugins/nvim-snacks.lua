@@ -1,8 +1,15 @@
 -- nvim-snacks.lua Snacks configuration
--- Last Changed:2025-05-26 20:09:54
+-- Last Changed:2025-05-26 21:31:03
 return {
   {
     "folke/snacks.nvim",
+    function()
+      Snacks.picker.buffers({
+        on_show = function()
+          vim.cmd.stopinsert()
+        end,
+      })
+    end,
     ---@type snacks.Config
     opts = {
       words = { enabled = false },
