@@ -1,15 +1,8 @@
 -- nvim-snacks.lua Snacks configuration
--- Last Changed:2025-05-26 21:31:03
+-- Last Changed:2025-05-26 22:15:53
 return {
   {
     "folke/snacks.nvim",
-    function()
-      Snacks.picker.buffers({
-        on_show = function()
-          vim.cmd.stopinsert()
-        end,
-      })
-    end,
     ---@type snacks.Config
     opts = {
       words = { enabled = false },
@@ -26,12 +19,15 @@ return {
       picker = {
         hidden = true,
         ignored = true,
+        include = { ".*" },
         exclude = { "node_modules", ".git", ".hg" },
-      },
-      sources = {
-        explorer = {
-          exclude = { ".git", ".hg" },
-          include = { ".*" },
+        sources = {
+          buffers = {
+            current = false,
+          },
+          files = {
+            hidden = true,
+          },
         },
       },
       -- Dashboard. This runs when neovim starts, and is what displays
@@ -52,6 +48,7 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
             { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
             { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
             { icon = " ", key = "S", desc = "Scratch Buffer", action = ":lua Snacks.scratch()" },
+            { icon = "󰐮 ", key = "p", desc = "Projects", action = ":lua Snacks.picker.projects()" },
             { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
             { icon = " ", key = "s", desc = "Restore Session", section = "session" },
             { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
