@@ -1,3 +1,5 @@
+-- options.lua NeoVIM options
+-- Last Changed:2025-05-26 20:00:32
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 
@@ -107,7 +109,7 @@ opt.splitright = true -- Put new windows right of current
 opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
-opt.timeoutlen = 100 -- Lower than default (1000) to quickly trigger which-key
+opt.timeoutlen = 10 -- Lower than default (1000) to quickly trigger which-key
 opt.undofile = true
 opt.undolevels = 10000
 opt.updatetime = 200 -- Save swap file and trigger CursorHold

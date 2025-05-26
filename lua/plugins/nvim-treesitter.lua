@@ -1,3 +1,5 @@
+-- nvim-treesitter.lua Treesitter related
+-- Last Changed:2025-05-26 20:10:32
 -- add more treesitter parsers
 return {
   { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },

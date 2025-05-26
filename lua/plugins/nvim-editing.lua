@@ -1,3 +1,5 @@
+-- nvim-editing.lua Editing related
+-- Last Changed:2025-05-26 19:56:56
 return {
   {
     "echasnovski/mini.surround",
@@ -48,6 +50,17 @@ return {
       check_ts = true,
       ts_config = {
         lua = { "string" }, -- don't add pairs in lua string treesitter nodes
+      },
+    },
+  },
+  {
+    "echasnovski/mini.comment",
+    event = "VeryLazy",
+    opts = {
+      options = {
+        custom_commentstring = function()
+          return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo.commentstring
+        end,
       },
     },
   },

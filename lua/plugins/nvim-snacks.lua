@@ -1,3 +1,5 @@
+-- nvim-snacks.lua Snacks configuration
+-- Last Changed:2025-05-26 20:09:54
 return {
   {
     "folke/snacks.nvim",

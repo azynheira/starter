@@ -1,3 +1,5 @@
+-- nvim-clipboard.lua Clipboard
+-- Last Changed:2025-05-26 19:54:40
 return {
   {
     "gbprod/yanky.nvim",

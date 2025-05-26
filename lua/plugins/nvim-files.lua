@@ -1,3 +1,5 @@
+-- nvim-files.lua Files related
+-- Last Changed:2025-05-26 20:01:11
 return {
   {
     "echasnovski/mini.files",

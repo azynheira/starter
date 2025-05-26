@@ -1,3 +1,5 @@
+-- nvim-shell.lua Shell related
+-- Last Changed:2025-05-26 20:08:31
 return {
   {
     "GR3YH4TT3R93/zellij-nav.nvim",

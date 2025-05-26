@@ -1,3 +1,5 @@
+-- nvim-mason.lua Mason setup
+-- Last Changed:2025-05-26 20:06:16
 return {
   {
     "mason-org/mason.nvim",

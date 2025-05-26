@@ -1,3 +1,5 @@
+-- nvim-moving.lua Code related to moving around
+-- Last Changed:2025-05-26 20:07:34
 return {
   {
     "ggandor/flit.nvim",
@@ -51,7 +53,7 @@ return {
       }
     end,
   },
-   -- Go forward/backward with square brackets
+  -- Go forward/backward with square brackets
   {
     "echasnovski/mini.bracketed",
     event = "BufReadPost",
@@ -66,5 +68,4 @@ return {
       })
     end,
   },
-
 }

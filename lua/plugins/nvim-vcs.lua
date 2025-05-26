@@ -1,3 +1,5 @@
+-- nvim-vcs.lua Version control stuff
+-- Last Changed:2025-05-26 20:11:28
 return {
   -- Configure mini.diff
   {

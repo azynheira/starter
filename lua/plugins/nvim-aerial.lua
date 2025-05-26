@@ -1,3 +1,5 @@
+-- nvim-aerial.lua- Aerial configuration
+-- Last Changed:2025-05-26 19:48:45
 return {
   {
     "stevearc/aerial.nvim",

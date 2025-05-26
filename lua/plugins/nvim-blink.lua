@@ -1,3 +1,5 @@
+-- nvim-blink.lua Blink configuration
+-- Last Changed:2025-05-26 19:53:28
 return {
   {
     "saghen/blink.cmp",
@@ -62,7 +64,7 @@ return {
         },
         documentation = {
           auto_show = true,
-          auto_show_delay_ms = 300,
+          auto_show_delay_ms = 200,
           window = { border = "rounded" },
         },
         ghost_text = {
@@ -72,8 +74,6 @@ return {
       fuzzy = {
         implementation = "prefer_rust_with_warning",
       },
-      -- experimental signature help support
-      -- signature = { enabled = true },
       signature = {
         enabled = true,
       },
@@ -88,7 +88,7 @@ return {
         enabled = true,
         completion = {
           menu = {
-            auto_show = false,
+            auto_show = true,
           },
         },
       },

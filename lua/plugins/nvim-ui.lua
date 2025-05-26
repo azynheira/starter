@@ -230,4 +230,10 @@ return {
       opts.presets.lsp_doc_border = false
     end,
   },
+  -- Marks in the signcolumn
+  {
+    "chentoast/marks.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
 }

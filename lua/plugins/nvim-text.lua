@@ -1,7 +1,13 @@
+-- nvim-test.lua Text files
+-- Last Changed:2025-05-26 20:05:26
 return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    enabled = false,
+    enabled = true,
+  },
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
   },
   {
     "quarto-dev/quarto-nvim",
