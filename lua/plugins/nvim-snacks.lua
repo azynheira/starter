@@ -1,7 +1,6 @@
 return {
   {
     "folke/snacks.nvim",
-
     ---@type snacks.Config
     opts = {
       words = { enabled = false },
@@ -27,7 +26,6 @@ return {
         },
       },
       -- Dashboard. This runs when neovim starts, and is what displays
-      ---@type snacks.Config
       dashboard = {
         preset = {
           header = [[
@@ -44,6 +42,7 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
             { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
             { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
             { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+            { icon = " ", key = "S", desc = "Scratch Buffer", action = ":lua Snacks.scratch()" },
             { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
             { icon = " ", key = "s", desc = "Restore Session", section = "session" },
             { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
@@ -62,6 +61,8 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
       },
       scratch = {
         enabled = true,
+        ft = "text",
+        name = "Scratch",
       },
       terminal = {
         enabled = true,
@@ -71,9 +72,6 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
       },
       -- convenience
       quickfile = {
-        enabled = true,
-      },
-      {
         enabled = true,
       },
       --- special mode
@@ -101,7 +99,6 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
           diagnostics = true,
         },
       },
-
       -- integrations
       lazygit = {
         enabled = true,
