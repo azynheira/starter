@@ -5,6 +5,7 @@ return {
   { "ellisonleao/gruvbox.nvim" },
   { "shaunsingh/nord.nvim" },
   { "folke/tokyonight.nvim" },
+  { "marko-cerovac/material.nvim" },
   {
     "craftzdog/solarized-osaka.nvim",
     branch = "osaka",
