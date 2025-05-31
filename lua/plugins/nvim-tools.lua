@@ -1,15 +1,6 @@
 -- nvim-tools.lua  - Generic tools
--- Last Changed:2025-05-26 20:12:13
+-- Last Changed:2025-05-31 09:53:20
 return {
-  "mbbill/undotree",
-  keys = {
-    {
-      "<leader>u",
-      "<CMD>UndotreeToggle<CR><C-h>",
-      mode = "n",
-      desc = "Toggle Undo Tree",
-    },
-  },
   {
     "StonyBoy/nvim-update-time",
     config = function()
@@ -30,5 +21,20 @@ return {
       open_for_directories = false,
       keymaps = {},
     },
+  },
+  {
+    "stevearc/oil.nvim",
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {
+      view_options = {
+        show_hidden = true,
+      },
+    },
+    -- Optional dependencies
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    lazy = false,
   },
 }

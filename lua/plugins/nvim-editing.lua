@@ -1,5 +1,5 @@
 -- nvim-editing.lua Editing related
--- Last Changed:2025-05-26 21:40:54
+-- Last Changed:2025-05-31 09:55:58
 return {
   {
     "echasnovski/mini.surround",
@@ -67,6 +67,17 @@ return {
         custom_commentstring = function()
           return require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo.commentstring
         end,
+      },
+    },
+  },
+  {
+    "mbbill/undotree",
+    keys = {
+      {
+        "<leader>U",
+        "<CMD>UndotreeToggle<CR><C-h>",
+        mode = "n",
+        desc = "Toggle Undo Tree",
       },
     },
   },
