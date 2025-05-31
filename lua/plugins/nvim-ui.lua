@@ -48,14 +48,14 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = {
       options = {
-        theme = "gruvbox", -- Change to your preferred theme
+        --      theme = "gruvbox", -- Change to your preferred theme
         section_separators = { left = "", right = "" },
         component_separators = { left = "", right = "" },
       },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { "filename" },
+        lualine_b = { "branch", "diff" },
+        --  lualine_c is filled in by default options in LazyVim
         lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_y = { "progress" },
         lualine_z = { "location" },
