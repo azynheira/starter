@@ -1,5 +1,5 @@
---- keymaps.lua Keymaps
--- Last Changed:2025-05-26 21:01:27
+-- keymaps.lua Keymap defintions
+-- Last Changed:2025-05-31 13:47:56
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 local keymap = vim.keymap
