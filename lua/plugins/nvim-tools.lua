@@ -1,5 +1,5 @@
 -- nvim-tools.lua  - Generic tools
--- Last Changed:2025-05-31 09:53:20
+-- Last Changed:2025-05-31 23:40:43
 return {
   {
     "StonyBoy/nvim-update-time",
@@ -36,5 +36,12 @@ return {
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
     -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
     lazy = false,
+  },
+  {
+    "bngarren/checkmate.nvim",
+    ft = "markdown", -- Lazy loads for Markdown files matching patterns in 'files'
+    opts = {
+      -- your configuration here
+    },
   },
 }
