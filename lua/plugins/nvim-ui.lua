@@ -21,7 +21,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "helix",
+      colorscheme = "gruvbox",
     },
   },
   { "xzbdmw/colorful-menu.nvim" },
