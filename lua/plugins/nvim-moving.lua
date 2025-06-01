@@ -1,5 +1,5 @@
 -- nvim-moving.lua Code related to moving around
--- Last Changed:2025-05-26 20:07:34
+-- Last Changed:2025-06-01 17:36:49
 return {
   {
     "ggandor/flit.nvim",
@@ -30,27 +30,6 @@ return {
       leap.add_default_mappings(true)
       vim.keymap.del({ "x", "o" }, "x")
       vim.keymap.del({ "x", "o" }, "X")
-    end,
-  },
-  {
-    "SmiteshP/nvim-navic",
-    lazy = true,
-    init = function()
-      vim.g.navic_silence = true
-      LazyVim.lsp.on_attach(function(client, buffer)
-        if client.supports_method("textDocument/documentSymbol") then
-          require("nvim-navic").attach(client, buffer)
-        end
-      end)
-    end,
-    opts = function()
-      return {
-        separator = " ",
-        highlight = true,
-        depth_limit = 5,
-        icons = LazyVim.config.icons.kinds,
-        lazy_update_context = true,
-      }
     end,
   },
   -- Go forward/backward with square brackets
