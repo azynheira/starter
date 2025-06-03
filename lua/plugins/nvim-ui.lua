@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-05-31 21:17:40
+-- Last Changed:2025-06-03 18:28:46
 return {
   -- Colorschemes
   { "oneslash/helix-nvim", version = "*" },
@@ -73,10 +73,24 @@ return {
     },
     opts = {
       options = {
+        diagnostics = "nvim_lsp",
+        --| "coc",
+        always_show_bufferline = true,
         mode = "tabs",
         separator_style = "slant",
-        show_buffer_close_icons = false,
-        show_close_icon = false,
+        show_buffer_close_icons = true,
+        show_close_icon = true,
+        offsets = {
+          {
+            filetype = "neo-tree",
+            text = "Neo-tree",
+            highlight = "Directory",
+            text_align = "left",
+          },
+          {
+            filetype = "snacks_layout_box",
+          },
+        },
       },
     },
   },
