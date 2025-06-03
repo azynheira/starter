@@ -1,11 +1,10 @@
 -- nvim-moving.lua Code related to moving around
--- Last Changed:2025-06-01 17:36:49
+-- Last Changed:2025-06-03 12:54:56
 return {
   {
     "ggandor/flit.nvim",
     enabled = true,
     keys = function()
-      ---@type LazyKeysSpec[]
       local ret = {}
       for _, key in ipairs({ "f", "F", "t", "T" }) do
         ret[#ret + 1] = { key, mode = { "n", "x", "o" } }
@@ -38,13 +37,7 @@ return {
     event = "BufReadPost",
     config = function()
       local bracketed = require("mini.bracketed")
-      bracketed.setup({
-        file = { suffix = "" },
-        window = { suffix = "" },
-        quickfix = { suffix = "" },
-        yank = { suffix = "" },
-        treesitter = { suffix = "n" },
-      })
     end,
   },
+  { "echasnovski/mini.ai", version = false },
 }

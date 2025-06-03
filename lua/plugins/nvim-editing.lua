@@ -1,5 +1,5 @@
 -- nvim-editing.lua Editing related
--- Last Changed:2025-05-31 09:55:58
+-- Last Changed:2025-06-03 12:56:21
 return {
   {
     "echasnovski/mini.surround",
@@ -80,5 +80,11 @@ return {
         desc = "Toggle Undo Tree",
       },
     },
+  },
+  {
+    "KashifKhn/nvim-remove-comments",
+    config = function()
+      require("nvim-remove-comments").setup()
+    end,
   },
 }
