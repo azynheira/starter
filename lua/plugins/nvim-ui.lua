@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-04 11:34:16
+-- Last Changed:2025-06-04 15:21:57
 return {
   -- Colorschemes
   { "oneslash/helix-nvim", version = "*" },
@@ -27,6 +27,7 @@ return {
     },
   },
   { "xzbdmw/colorful-menu.nvim" },
+  { "echasnovski/mini.hues" },
   { "echasnovski/mini.colors" },
   {
     "echasnovski/mini.icons",
