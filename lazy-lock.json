@@ -35,6 +35,7 @@
   "material.nvim": { "branch": "main", "commit": "0004ec60f91d581d47563a39f7dac62cb758f7ea" },
   "mini.ai": { "branch": "main", "commit": "5225f16eacf4dce2cb7204ca345123ef54e209d6" },
   "mini.bracketed": { "branch": "main", "commit": "079b8375e40ebf3f8af319ad835263ff390c3965" },
+  "mini.colors": { "branch": "main", "commit": "ef76867adda63d6010acdc8732a816c8527d276b" },
   "mini.comment": { "branch": "main", "commit": "22ee9f6be1c78bcebe009a564758e5b6df08903b" },
   "mini.diff": { "branch": "main", "commit": "f7bcd3cb4561f7d3a02ae9afafeda899c82f7108" },
   "mini.files": { "branch": "main", "commit": "49c855977e9f4821d1ed8179ed44fe098b93ea2a" },
