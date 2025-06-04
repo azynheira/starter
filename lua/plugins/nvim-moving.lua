@@ -1,10 +1,11 @@
 -- nvim-moving.lua Code related to moving around
--- Last Changed:2025-06-04 17:43:27
+-- Last Changed:2025-06-04 20:58:56
 return {
   {
     "ggandor/flit.nvim",
     enabled = true,
     keys = function()
+      ---@type LazyKeysSpec[]
       local ret = {}
       for _, key in ipairs({ "f", "F", "t", "T" }) do
         ret[#ret + 1] = { key, mode = { "n", "x", "o" } }
@@ -17,10 +18,9 @@ return {
     "ggandor/leap.nvim",
     enabled = true,
     keys = {
-      { "gl", mode = { "n", "x", "o" }, desc = "Leap" },
-      { "gls", mode = { "n", "x", "o" }, desc = "Leap Forward to" },
-      { "glS", mode = { "n", "x", "o" }, desc = "Leap Backward to" },
-      { "glw", mode = { "n", "x", "o" }, desc = "Leap from Windows" },
+      { "s", mode = { "n", "x", "o" }, desc = "Leap Forward to" },
+      { "S", mode = { "n", "x", "o" }, desc = "Leap Backward to" },
+      { "gs", mode = { "n", "x", "o" }, desc = "Leap from Windows" },
     },
     config = function(_, opts)
       local leap = require("leap")
@@ -32,13 +32,36 @@ return {
       vim.keymap.del({ "x", "o" }, "X")
     end,
   },
-  -- Go forward/backward with square brackets
   {
-    "echasnovski/mini.bracketed",
-    event = "BufReadPost",
-    config = function()
-      local bracketed = require("mini.bracketed")
-    end,
+    "echasnovski/mini.move",
+    event = "VeryLazy",
+    opts = {},
   },
   { "echasnovski/mini.ai", version = false },
+  {
+    "echasnovski/mini.surround",
+    optional = true,
+    opts = {
+      mappings = {
+        add = "gza", -- Add surrounding in Normal and Visual modes
+        delete = "gzd", -- Delete surrounding
+        find = "gzf", -- Find surrounding (to the right)
+        find_left = "gzF", -- Find surrounding (to the left)
+        highlight = "gzh", -- Highlight surrounding
+        replace = "gzr", -- Replace surrounding
+        update_n_lines = "gzn", -- Update `n_lines`
+      },
+    },
+    keys = {
+      { "gz", "", desc = "+surround" },
+    },
+    -- Go forward/backward with square brackets
+    {
+      "echasnovski/mini.bracketed",
+      event = "BufReadPost",
+      config = function()
+        local bracketed = require("mini.bracketed")
+      end,
+    },
+  },
 }
