@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-04 05:54:14
+-- Last Changed:2025-06-04 07:44:20
 return {
   -- Colorschemes
   { "oneslash/helix-nvim", version = "*" },
@@ -76,7 +76,7 @@ return {
         diagnostics = "nvim_lsp",
         --| "coc",
         always_show_bufferline = true,
-        mode = "tabs",
+        mode = "buffers",
         separator_style = "thin",
         show_buffer_close_icons = true,
         show_close_icon = true,
