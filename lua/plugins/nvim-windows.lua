@@ -1,5 +1,5 @@
--- nvim-windows.lua Windows stuff
--- Last Changed:2025-05-27 07:17:45
+-- nvim-windows.lua windows related stuff
+-- Last Changed:2025-06-04 09:17:20
 return {
   { "tiagovla/scope.nvim", config = true },
   {

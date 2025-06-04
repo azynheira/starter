@@ -1,5 +1,5 @@
 -- nvim-files.lua Files related
--- Last Changed:2025-05-26 20:01:11
+-- Last Changed:2025-06-04 09:20:41
 return {
   {
     "echasnovski/mini.files",
@@ -11,7 +11,7 @@ return {
       },
       options = {
         -- Whether to use for editing directories
-        -- Disabled by default in LazyVim because neo-tree is used for that
+        -- Disabled by default in LazyVim because snacks is used for that
         use_as_default_explorer = false,
       },
     },

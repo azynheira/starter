@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-04 10:57:13
+-- Last Changed:2025-06-04 11:34:16
 return {
   -- Colorschemes
   { "oneslash/helix-nvim", version = "*" },
@@ -23,7 +23,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "helix",
     },
   },
   { "xzbdmw/colorful-menu.nvim" },
@@ -72,12 +72,21 @@ return {
       { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
+    diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      if context.buffer:current() then
+        return ""
+      end
+      return ""
+    end,
+    numbers = function(opts)
+      return string.format("%s.%s", opts.lower(opts.id), opts.lower(opts.ordinal))
+    end,
     opts = {
       options = {
         diagnostics = "nvim_lsp",
         --| "coc",
         always_show_bufferline = true,
-        mode = "buffers",
+        mode = "tabs",
         separator_style = "thin",
         show_buffer_close_icons = true,
         show_close_icon = true,

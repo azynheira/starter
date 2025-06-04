@@ -1,5 +1,5 @@
--- nvim-editing.lua Editing related
--- Last Changed:2025-06-03 12:56:21
+-- nvim-editing.lua Editing related stuff
+-- Last Changed:2025-06-04 09:18:36
 return {
   {
     "echasnovski/mini.surround",

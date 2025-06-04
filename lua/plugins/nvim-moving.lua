@@ -1,5 +1,5 @@
 -- nvim-moving.lua Code related to moving around
--- Last Changed:2025-06-03 12:54:56
+-- Last Changed:2025-06-04 09:38:26
 return {
   {
     "ggandor/flit.nvim",
@@ -19,7 +19,7 @@ return {
     keys = {
       { "s", mode = { "n", "x", "o" }, desc = "Leap Forward to" },
       { "S", mode = { "n", "x", "o" }, desc = "Leap Backward to" },
-      { "gs", mode = { "n", "x", "o" }, desc = "Leap from Windows" },
+      { "gS", mode = { "n", "x", "o" }, desc = "Leap from Windows" },
     },
     config = function(_, opts)
       local leap = require("leap")
