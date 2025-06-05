@@ -1,5 +1,5 @@
 -- nvim-editing.lua Editing related stuff
--- Last Changed:2025-06-04 20:58:42
+-- Last Changed:2025-06-05 13:52:07
 return {
   { "tpope/vim-repeat", event = "VeryLazy" },
   {
@@ -50,5 +50,14 @@ return {
     config = function()
       require("nvim-remove-comments").setup()
     end,
+  },
+  {
+    "johmsalas/text-case.nvim",
+    lazy = false,
+    config = true,
+    cmd = {
+      "Subs",
+      "TextCaseStartReplacingCommand",
+    },
   },
 }

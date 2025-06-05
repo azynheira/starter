@@ -1,12 +1,12 @@
 -- nvim-snacks.lua Snacks configuration
--- Last Changed:2025-05-26 22:15:53
+-- Last Changed:2025-06-05 16:13:26
 return {
   {
     "folke/snacks.nvim",
     ---@type snacks.Config
     opts = {
       words = { enabled = false },
-      image = { enabled = true },
+      image = { enabled = false },
       bigfile = { enabled = true },
       bufdelete = { enabled = true },
       -- show hidden files in snacks.explorer
@@ -60,7 +60,7 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
       notifier = {
         enabled = true,
         --- available style: "compact"|"fancy"|"minimal"
-        style = "fancy",
+        style = "compact",
       },
       statuscolumn = {
         enabled = true,
@@ -100,9 +100,10 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
         ---@type table<string, boolean>
         toggles = {
           dim = false,
-          git_signs = false,
-          mini_diff_signs = false,
+          git_signs = true,
+          mini_diff_signs = true,
           diagnostics = true,
+          inlay_hints = true,
         },
       },
       -- integrations
