@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-04 15:21:57
+-- Last Changed:2025-06-05 10:06:44
 return {
   -- Colorschemes
   { "oneslash/helix-nvim", version = "*" },
@@ -70,6 +70,34 @@ return {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     keys = {
+      {
+        "L",
+        function()
+          vim.cmd("bnext " .. vim.v.count1)
+        end,
+        desc = "Next buffer",
+      },
+      {
+        "H",
+        function()
+          vim.cmd("bprev " .. vim.v.count1)
+        end,
+        desc = "Previous buffer",
+      },
+      {
+        "]b",
+        function()
+          vim.cmd("bnext " .. vim.v.count1)
+        end,
+        desc = "Next buffer",
+      },
+      {
+        "[b",
+        function()
+          vim.cmd("bprev " .. vim.v.count1)
+        end,
+        desc = "Previous buffer",
+      },
       { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },

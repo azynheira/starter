@@ -1,5 +1,5 @@
 -- nvim-lsp.lua LSP configuration
--- Last Changed:2025-05-31 14:56:59
+-- Last Changed:2025-06-05 10:00:12
 
 return {
   {
@@ -126,5 +126,42 @@ return {
         desc = "Next Trouble/Quickfix Item",
       },
     },
+  },
+  {
+    "onsails/lspkind.nvim",
+    config = function()
+      require("lspkind").init({
+        -- Customize options here if needed
+        mode = "symbol_text", -- Show both symbol and text
+        preset = "default", -- Use default preset
+        symbol_map = {
+          Text = "",
+          Method = "",
+          Function = "",
+          Constructor = "",
+          Field = "",
+          Variable = "",
+          Class = "ﴯ",
+          Interface = "",
+          Module = "",
+          Property = "ﰠ",
+          Unit = "",
+          Value = "",
+          Enum = "",
+          Keyword = "",
+          Snippet = "",
+          Color = "",
+          File = "",
+          Reference = "",
+          Folder = "",
+          EnumMember = "",
+          Constant = "",
+          Struct = "",
+          Event = "",
+          Operator = "",
+          TypeParameter = "",
+        },
+      })
+    end,
   },
 }

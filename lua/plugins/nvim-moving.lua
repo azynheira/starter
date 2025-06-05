@@ -1,5 +1,5 @@
 -- nvim-moving.lua Code related to moving around
--- Last Changed:2025-06-04 20:58:56
+-- Last Changed:2025-06-05 12:53:34
 return {
   {
     "ggandor/flit.nvim",
@@ -61,6 +61,26 @@ return {
       event = "BufReadPost",
       config = function()
         local bracketed = require("mini.bracketed")
+      end,
+    },
+    {
+      "echasnovski/mini.pairs",
+      event = "VeryLazy",
+      version = false,
+      opts = {
+        modes = { insert = true, command = true, terminal = true },
+        -- skip autopair when next character is one of these
+        skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+        -- skip autopair when the cursor is inside these treesitter nodes
+        skip_ts = { "string" },
+        -- skip autopair when next character is closing pair
+        -- and there are more closing pairs than opening pairs
+        skip_unbalanced = true,
+        -- better deal with markdown code blocks
+        markdown = true,
+      },
+      config = function(_, opts)
+        LazyVim.mini.pairs(opts)
       end,
     },
   },
