@@ -19,3 +19,11 @@ vim.api.nvim_create_autocmd("CursorHold", {
     vim.diagnostic.open_float(nil, { focusable = false, source = "if_many" })
   end,
 })
+
+-- Copy clipboard on FocusLost
+vim.api.nvim_create_autocmd("FocusLost", {
+  desc = "Copy to Clipboard on FocusLost",
+  callback = function()
+    vim.fn.setreg("+", vim.fn.getreg("0"))
+  end,
+})

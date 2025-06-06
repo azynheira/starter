@@ -1,5 +1,5 @@
 -- nvim-search.lua Search configuration
--- Last Changed:2025-06-05 14:11:05
+-- Last Changed:2025-06-06 22:14:35
 return {
   {
     "folke/todo-comments.nvim",
@@ -21,6 +21,12 @@ return {
           local ignore_these = "!dist/ !.next/ !.git/ !.gitlab/ !build/ !target/"
           local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")
           grug.open({
+            helpLine = {
+              enabled = false,
+            },
+            showCompactInputs = true,
+            showInputsTopPadding = false,
+            showInputsBottomPadding = false,
             transient = true,
             prefills = {
               filesFilter = ignore_these,
