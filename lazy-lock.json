@@ -73,6 +73,7 @@
   "nvim-update-time": { "branch": "main", "commit": "3cacbeff6487969a835f2d3c0b708ccdfa16e48f" },
   "oil.nvim": { "branch": "master", "commit": "08c2bce8b00fd780fb7999dbffdf7cd174e896fb" },
   "one-small-step-for-vimkind": { "branch": "main", "commit": "c77612c43382c82d59dc436800e5424bcd89290e" },
+  "orgmode": { "branch": "master", "commit": "01e0924e38c7525fc0db22639abf39cf2dd3042d" },
   "otter.nvim": { "branch": "main", "commit": "1348aad77adac26fe3dff44aa220c5a7e96aa8ae" },
   "outline.nvim": { "branch": "main", "commit": "321f89ef79f168a78685f70d70c52d0e7b563abb" },
   "overseer.nvim": { "branch": "master", "commit": "72c68aab0358c92f451168b704c411c4a3e3410e" },
