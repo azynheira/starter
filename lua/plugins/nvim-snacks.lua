@@ -1,6 +1,6 @@
 -- nvim-snacks.lua Snacks configuration
 
--- Last Changed:2025-06-08 18:09:02
+-- Last Changed:2025-06-08 18:25:17
 return {
   {
     priority = 1000,
@@ -120,7 +120,7 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
       terminal = {
         enabled = true,
         win = {
-          position = "float",
+          position = "bottom",
           border = "single",
         },
       },
