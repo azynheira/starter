@@ -1,10 +1,26 @@
 -- nvim-snacks.lua Snacks configuration
 
--- Last Changed:2025-06-08 16:51:10
+-- Last Changed:2025-06-08 18:09:02
 return {
   {
+    priority = 1000,
+    lazy = false,
     "folke/snacks.nvim",
     ---@type snacks.Config
+    keys = {
+      {
+        "<leader>T",
+        nil,
+        desc = "Terminal",
+      },
+      {
+        "<leader>Tt",
+        function()
+          Snacks.terminal()
+        end,
+        desc = "Snacks Terminal",
+      },
+    },
     opts = {
       indent = {
         enabled = true,
@@ -23,7 +39,15 @@ return {
         enabled = true,
         style = "fancy",
       },
-      words = { enabled = false },
+      words = {
+        enabled = false,
+        debounce = 200,
+        notify_jump = false,
+        notify_end = true,
+        foldopen = true,
+        jumplist = true,
+        modes = { "n" },
+      },
       image = { enabled = false },
       bigfile = { enabled = true },
       bufdelete = { enabled = true },
@@ -59,8 +83,6 @@ return {
       dashboard = {
         preset = {
           header = [[
-                                        oo            
-
 88d888b. .d8888b. .d8888b. dP   .dP dP 88d8b.d8b. 
 88'  `88 88ooood8 88'  `88 88   d8' 88 88'`88'`88 
 88    88 88.  ... 88.  .88 88 .88'  88 88  88  88 
@@ -98,7 +120,8 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
       terminal = {
         enabled = true,
         win = {
-          position = "bottom",
+          position = "float",
+          border = "single",
         },
       },
       -- convenience
