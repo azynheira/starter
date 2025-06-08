@@ -1,10 +1,28 @@
 -- nvim-snacks.lua Snacks configuration
--- Last Changed:2025-06-05 16:13:26
+
+-- Last Changed:2025-06-08 16:51:10
 return {
   {
     "folke/snacks.nvim",
     ---@type snacks.Config
     opts = {
+      indent = {
+        enabled = true,
+        animate = {
+          enabled = false,
+        },
+        indent = {
+          only_scope = true,
+          only_current = true,
+        },
+        scope = {
+          hl = "LineNr",
+        },
+      },
+      input = {
+        enabled = true,
+        style = "fancy",
+      },
       words = { enabled = false },
       image = { enabled = false },
       bigfile = { enabled = true },
@@ -17,10 +35,17 @@ return {
         exclude = { "node_modules", ".git", ".hg" },
       },
       picker = {
+        enabled = true,
         hidden = true,
         ignored = true,
         include = { ".*" },
         exclude = { "node_modules", ".git", ".hg" },
+        layout = {
+          cycle = true,
+          preset = function()
+            return vim.o.columns >= 120 and "default" or "vertical"
+          end,
+        },
         sources = {
           buffers = {
             current = false,

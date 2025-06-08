@@ -1,5 +1,5 @@
 -- nvim-test.lua Text files
--- Last Changed:2025-05-26 20:05:26
+-- Last Changed:2025-06-08 09:52:55
 return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
@@ -24,7 +24,7 @@ return {
     },
     opts = {
       lspFeatures = {
-        languages = { "r", "python", "julia", "bash", "lua", "html" },
+        languages = { "python", "julia", "bash", "lua", "html" },
       },
       codeRunner = {
         enabled = true,
