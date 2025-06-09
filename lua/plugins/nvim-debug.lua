@@ -1,5 +1,5 @@
 -- nvim-debug.lua Debug related
--- Last Changed:2025-06-07 17:43:50
+-- Last Changed:2025-06-09 11:01:26
 
 -- Docs at https://github.com/mfussenegger/nvim-dap-python are useful.
 return {
@@ -79,22 +79,6 @@ return {
         dependencies = {
           "mfussenegger/nvim-dap",
           "williamboman/mason.nvim",
-        },
-      },
-      {
-        "leoluz/nvim-dap-go",
-        config = true,
-        dependencies = {
-          "mfussenegger/nvim-dap",
-        },
-        keys = {
-          {
-            "<leader>dt",
-            function()
-              require("dap-go").debug_test()
-            end,
-            desc = "Debug test",
-          },
         },
       },
       {
