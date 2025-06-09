@@ -1,5 +1,5 @@
 -- nvim-lsp.lua LSP configuration
--- Last Changed:2025-06-05 10:00:12
+-- Last Changed:2025-06-09 08:23:17
 
 return {
   {
@@ -24,13 +24,18 @@ return {
     opts = {
       delay = 200,
       large_file_cutoff = 2000,
+      filetypes_denylist = {
+        "aerial",
+        "neo-tree",
+      },
+      modes_denylist = { "v", "V" },
+      under_cursor = false,
       large_file_overrides = {
         providers = { "lsp" },
       },
     },
     config = function(_, opts)
       require("illuminate").configure(opts)
-
       Snacks.toggle({
         name = "Illuminate",
         get = function()

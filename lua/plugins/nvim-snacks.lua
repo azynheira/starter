@@ -1,6 +1,6 @@
 -- nvim-snacks.lua Snacks configuration
 
--- Last Changed:2025-06-08 18:25:17
+-- Last Changed:2025-06-09 08:44:51
 return {
   {
     priority = 1000,
@@ -96,6 +96,7 @@ dP    dP `88888P' `88888P' 8888P'   dP dP  dP  dP]],
             { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
             { icon = " ", key = "S", desc = "Scratch Buffer", action = ":lua Snacks.scratch()" },
             { icon = "󰐮 ", key = "p", desc = "Projects", action = ":lua Snacks.picker.projects()" },
+            { icon = "󱊈 ", key = "m", desc = "Mason", action = ":Mason" },
             { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
             { icon = " ", key = "s", desc = "Restore Session", section = "session" },
             { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },

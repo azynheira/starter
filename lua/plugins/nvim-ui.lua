@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-05 13:32:33
+-- Last Changed:2025-06-09 08:15:19
 return {
   -- Colorschemes
   { "oneslash/helix-nvim", version = "*" },
@@ -194,5 +194,26 @@ return {
   {
     "karb94/neoscroll.nvim",
     opts = {},
+  },
+  {
+    "luukvbaal/statuscol.nvim",
+    config = function()
+      local builtin = require("statuscol.builtin")
+      require("statuscol").setup({
+        relculright = true,
+        segments = {
+          { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+          {
+            sign = { namespace = { "diagnostic/signs" }, maxwidth = 2, auto = true },
+            click = "v:lua.ScSa",
+          },
+          { text = { builtin.lnumfunc }, click = "v:lua.ScLa" },
+          {
+            sign = { name = { ".*" }, maxwidth = 2, colwidth = 1, auto = true, wrap = true },
+            click = "v:lua.ScSa",
+          },
+        },
+      })
+    end,
   },
 }

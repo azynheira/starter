@@ -1,26 +1,25 @@
 -- nvim-windows.lua windows related stuff
--- Last Changed:2025-06-04 09:17:20
+-- Last Changed:2025-06-09 08:20:20
 return {
   { "tiagovla/scope.nvim", config = true },
   {
     "folke/edgy.nvim",
-    ---@module 'edgy'
-    ---@param opts Edgy.Config
-    opts = function(_, opts)
-      for _, pos in ipairs({ "top", "bottom", "left", "right" }) do
-        opts[pos] = opts[pos] or {}
-        table.insert(opts[pos], {
-          ft = "snacks_terminal",
-          size = { height = 0.4 },
-          title = "%{b:snacks_terminal.id}: %{b:term_title}",
-          filter = function(_buf, win)
-            return vim.w[win].snacks_win
-              and vim.w[win].snacks_win.position == pos
-              and vim.w[win].snacks_win.relative == "editor"
-              and not vim.w[win].trouble_preview
-          end,
-        })
-      end
-    end,
+    opts = {
+      animate = { enabled = false },
+      exit_when_last = true,
+      right = {
+        {
+          title = "Outline",
+          ft = "aerial",
+          pinned = true,
+          open = "AerialToggle",
+          size = { width = 0.15 },
+        },
+      },
+      icons = {
+        closed = " ▸",
+        open = " 𝅍",
+      },
+    },
   },
 }
