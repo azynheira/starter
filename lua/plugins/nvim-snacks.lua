@@ -1,6 +1,6 @@
 -- nvim-snacks.lua Snacks configuration
 
--- Last Changed:2025-06-09 08:44:51
+-- Last Changed:2025-06-13 16:47:43
 return {
   {
     priority = 1000,
@@ -40,7 +40,7 @@ return {
         style = "fancy",
       },
       words = {
-        enabled = false,
+        enabled = true,
         debounce = 200,
         notify_jump = false,
         notify_end = true,
@@ -48,7 +48,7 @@ return {
         jumplist = true,
         modes = { "n" },
       },
-      image = { enabled = false },
+      image = { enabled = true },
       bigfile = { enabled = true },
       bufdelete = { enabled = true },
       -- show hidden files in snacks.explorer

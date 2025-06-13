@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-09 08:15:19
+-- Last Changed:2025-06-11 21:00:24
 return {
   -- Colorschemes
   { "oneslash/helix-nvim", version = "*" },
@@ -23,7 +23,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "helix",
+      colorscheme = "material-oceanic",
     },
   },
   { "xzbdmw/colorful-menu.nvim" },

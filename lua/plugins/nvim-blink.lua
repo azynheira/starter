@@ -1,5 +1,5 @@
 -- nvim-blink.lua Blink configuration
--- Last Changed:2025-05-26 19:53:28
+-- Last Changed:2025-06-11 20:51:59
 return {
   {
     "saghen/blink.cmp",
@@ -61,6 +61,7 @@ return {
           draw = {
             treesitter = { "lsp" },
           },
+          scrollbar = false,
         },
         documentation = {
           auto_show = true,
