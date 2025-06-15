@@ -1,7 +1,8 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-11 21:00:24
+-- Last Changed:2025-06-15 12:13:55
 return {
   -- Colorschemes
+  { "rebelot/kanagawa.nvim" },
   { "oneslash/helix-nvim", version = "*" },
   { "vague2k/vague.nvim" },
   { "ellisonleao/gruvbox.nvim" },
@@ -31,6 +32,7 @@ return {
   { "echasnovski/mini.colors" },
   {
     "echasnovski/mini.icons",
+    version = false,
     opts = {
       style = "glyph",
       file = {
