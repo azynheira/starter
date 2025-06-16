@@ -1,5 +1,5 @@
 -- nvim-mason.lua Mason setup
--- Last Changed:2025-06-08 17:31:55
+-- Last Changed:2025-06-16 22:29:07
 return {
   {
     "mason-org/mason.nvim",
@@ -7,8 +7,8 @@ return {
     opts = {
       ensure_installed = {
         "arduino-language-server",
-        "asmfmt",
         "asm-lsp",
+        "asmfmt",
         "autopep8",
         "awk-language-server",
         "bash-debug-adapter",
@@ -30,7 +30,7 @@ return {
         "lua-language-server",
         "markdown-oxide",
         "markdown-toc",
-        "markdownlint",
+        "markdownlint-cli2",
         "marksman",
         "neocmakelsp",
         "prettier",

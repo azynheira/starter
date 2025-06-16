@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-15 12:13:55
+-- Last Changed:2025-06-16 22:24:09
 return {
   -- Colorschemes
   { "rebelot/kanagawa.nvim" },
@@ -24,7 +24,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "material-oceanic",
+      colorscheme = "material-deep-ocean",
     },
   },
   { "xzbdmw/colorful-menu.nvim" },
