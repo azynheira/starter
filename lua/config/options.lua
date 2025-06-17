@@ -1,5 +1,5 @@
 -- options.lua NeoVIM options
--- Last Changed:2025-05-31 20:10:26
+-- Last Changed:2025-06-17 13:41:41
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 
@@ -40,7 +40,7 @@ vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 -- This sets `vim.o.shell` and does some additional configuration for:
 -- * pwsh
 -- * powershell
--- LazyVim.terminal.setup("pwsh")
+LazyVim.terminal.setup("fish")
 
 -- Set LSP servers to be ignored when used with `util.root.detectors.lsp`
 -- for detecting the LSP root
@@ -90,7 +90,7 @@ opt.mouse = "a" -- Enable mouse mode
 opt.number = true -- Print line number
 opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
-opt.relativenumber = false -- Relative line numbers
+opt.relativenumber = true -- Relative line numbers
 opt.ruler = false -- Disable the default ruler
 opt.scrolloff = 4 -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
