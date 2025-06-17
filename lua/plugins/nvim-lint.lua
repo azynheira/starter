@@ -1,5 +1,5 @@
 -- nvim-lint.lua Lint configuration
--- Last Changed:2025-06-06 22:38:15
+-- Last Changed:2025-06-16 22:42:13
 return {
   { -- Linting
     "mfussenegger/nvim-lint",
@@ -7,7 +7,7 @@ return {
     config = function()
       local lint = require "lint"
       lint.linters_by_ft = {
-        markdown = { "markdownlint" },
+        markdown = { "markdownlint-cli2" },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
