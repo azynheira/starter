@@ -1,5 +1,5 @@
 -- nvim-debug.lua Debug related
--- Last Changed:2025-06-09 11:01:26
+-- Last Changed:2026-02-27 15:18:31
 
 -- Docs at https://github.com/mfussenegger/nvim-dap-python are useful.
 return {
@@ -78,7 +78,7 @@ return {
         },
         dependencies = {
           "mfussenegger/nvim-dap",
-          "williamboman/mason.nvim",
+          "mason-org/mason.nvim",
         },
       },
       {

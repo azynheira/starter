@@ -28,10 +28,10 @@ return {
     },
   },
   { "xzbdmw/colorful-menu.nvim" },
-  { "echasnovski/mini.hues" },
-  { "echasnovski/mini.colors" },
+  { "nvim-mini/mini.hues" },
+  { "nvim-mini/mini.colors" },
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     version = false,
     opts = {
       style = "glyph",

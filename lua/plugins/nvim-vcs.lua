@@ -3,7 +3,7 @@
 return {
   -- Configure mini.diff
   {
-    "echasnovski/mini.diff",
+    "nvim-mini/mini.diff",
     event = "VeryLazy",
     keys = {
       {

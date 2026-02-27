@@ -1,8 +1,8 @@
 -- nvim-lazyvim.lua Lazyvim special setup
--- Last Changed:2025-06-16 11:30:12
+-- Last Changed:2025-06-22 10:17:56
 return {
-  { "folke/lazy.nvim", version = false },
-  { "LazyVim/LazyVim", version = false },
+  --   { "folke/lazy.nvim", version = false },
+  --   { "LazyVim/LazyVim", version = false },
   {
     "rootiest/nvim-updater.nvim",
     version = "*", -- Pin to GitHub releases

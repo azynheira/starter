@@ -2,7 +2,7 @@
 -- Last Changed:2025-06-04 09:20:41
 return {
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     opts = {
       windows = {
         preview = true,

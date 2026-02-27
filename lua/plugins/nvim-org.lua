@@ -1,5 +1,5 @@
 -- nvim-org.lua ORG mode
--- Last Changed:2025-06-08 20:37:59
+-- Last Changed:2026-02-27 15:31:47
 return {
   {
     "nvim-orgmode/orgmode",
@@ -14,7 +14,7 @@ return {
 
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
       -- add ~org~ to ignore_install
-      require("nvim-treesitter.configs").setup({
+      require("nvim-treesitter.config").setup({
         --ensure_installed = "all",
         --ignore_install = { "org" },
       })

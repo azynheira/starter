@@ -1,5 +1,5 @@
 -- nvim-treesitter.lua Treesitter related
--- Last Changed:2025-05-26 20:10:32
+-- Last Changed:2026-02-27 15:31:29
 -- add more treesitter parsers
 return {
   { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
@@ -84,7 +84,7 @@ return {
       },
     },
     config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
+      require("nvim-treesitter.config").setup(opts)
 
       -- MDX
       vim.filetype.add({

@@ -33,13 +33,13 @@ return {
     end,
   },
   {
-    "echasnovski/mini.move",
+    "nvim-mini/mini.move",
     event = "VeryLazy",
     opts = {},
   },
-  { "echasnovski/mini.ai", version = false },
+  { "nvim-mini/mini.ai", version = false },
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     optional = true,
     opts = {
       mappings = {
@@ -57,14 +57,14 @@ return {
     },
     -- Go forward/backward with square brackets
     {
-      "echasnovski/mini.bracketed",
+      "nvim-mini/mini.bracketed",
       event = "BufReadPost",
       config = function()
         local bracketed = require("mini.bracketed")
       end,
     },
     {
-      "echasnovski/mini.pairs",
+      "nvim-mini/mini.pairs",
       event = "VeryLazy",
       version = false,
       opts = {
