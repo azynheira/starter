@@ -1,22 +1,26 @@
 -- nvim-lsp.lua LSP configuration
--- Last Changed:2025-06-09 08:23:17
+-- Last Changed:2026-02-28 18:45:50
 
 return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      keys[#keys + 1] = {
-        "<leader>cr",
-        function()
-          local inc_rename = require("inc_rename")
-          return ":" .. inc_rename.config.cmd_name .. " " .. vim.fn.expand("<cword>")
-        end,
-        expr = true,
-        desc = "Rename (inc-rename.nvim)",
-        has = "rename",
-      }
-    end,
+  "neovim/nvim-lspconfig",
+  opts = {
+    servers = {
+      ["*"] = {
+        keys = {
+          -- Only set this keymap for servers that support code actions
+          { "<leader>ca", vim.lsp.buf.code_action, desc = "Code Action", has = "codeAction" },
+          -- Multiple capabilities
+          {
+            "<leader>cR",
+            function()
+              Snacks.rename.rename_file()
+            end,
+            desc = "Rename File",
+            has = { "workspace/didRenameFiles", "workspace/willRenameFiles" },
+          },
+        },
+      },
+    },
   },
   {
     "RRethy/vim-illuminate",

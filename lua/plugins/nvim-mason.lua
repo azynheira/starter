@@ -1,9 +1,8 @@
 -- nvim-mason.lua Mason setup
--- Last Changed:2025-06-16 22:29:07
+-- Last Changed:2026-02-28 15:55:29
 return {
   {
     "mason-org/mason.nvim",
-    version = "^1.0.0",
     opts = {
       ensure_installed = {
         "arduino-language-server",
@@ -45,6 +44,5 @@ return {
   },
   {
     "mason-org/mason-lspconfig.nvim",
-    version = "^1.0.0",
   },
 }

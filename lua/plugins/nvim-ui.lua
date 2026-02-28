@@ -1,5 +1,5 @@
 -- nvim-ui.lua UI related stuff
--- Last Changed:2025-06-19 10:17:32
+-- Last Changed:2026-02-28 18:36:39
 return {
   -- Colorschemes
   { "rebelot/kanagawa.nvim" },
