@@ -1,5 +1,5 @@
 -- nvim-moving.lua Code related to moving around
--- Last Changed:2025-06-05 12:53:34
+-- Last Changed:2026-04-05 09:51:11
 return {
   {
     "ggandor/flit.nvim",
@@ -15,7 +15,7 @@ return {
     opts = { labeled_modes = "nx" },
   },
   {
-    "ggandor/leap.nvim",
+    "https://codeberg.org/andyg/leap.nvim.git",
     enabled = true,
     keys = {
       { "s", mode = { "n", "x", "o" }, desc = "Leap Forward to" },
